@@ -86,7 +86,6 @@ README
 comentarios
 pie de pagina
 etiquetas header
-portapapeles celular
 formatear codigo
 */
 
