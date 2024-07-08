@@ -1,200 +1,270 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); /* Importa la fuente "Inter" de Google Fonts con diferentes pesos */
 
 :root {
-    --color-azul-claro: #D8DFE8;
-    --color-azul-oscuro:#0A3871; 
-    --color-blanco:#FFFFFF;
-    --color-gris: #65747D;
+    --color-primario: #0A3871; /* Define color primario */
+    --color-secundario: #D8DFE8; /* Define color secundario */
+    --color-blanco: #FFFFFF; /* Define color blanco */
+    --color-gris: #65747D; /* Define color gris */
+    --color-negro: #000000; /* Define color negro */
 }
 
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing:border-box ;
-    font-family: "Inter", sans-serif;
-    /*outline: 1px dotted rgb(13, 66, 66);*/
+* {
+    margin: 0%; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0%; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
+    font-family: "Inter", sans-serif; /* Aplica la fuente "Inter" a todos los elementos */
+    /*outline: 1px dotted rgb(13, 66, 66); /*Activar este borde para revisar los límites de las secciones*/
 }
 
-body{
-    background-color: var(--color-azul-claro);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+body {
+    height: 100vh; /* Define la altura del cuerpo del documento al 100% del alto de la ventana */
+    width: 100vw; /* Define el ancho del cuerpo del documento al 100% del ancho de la ventana */
+    background-color: var(--color-secundario); /* Aplica el color de fondo secundario */
+    cursor: url("/assets/cursor-general.png") 0 0, auto; /* Cambia el cursor a una imagen personalizada */
 }
 
-#div_principal{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+header {
+    height: 13%; /* Define la altura del encabezado */
+    width: 100%; /* Define el ancho del encabezado */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    background-color: var(--color-primario); /* Aplica el color de fondo primario */
+    color: var(--color-blanco); /* Aplica el color de texto blanco */
 }
 
-#div_logo{
-    width: 100%;
-    height: 15%;
+#logo-planilla {
+    line-height: 5%; /* Define la altura de línea del logo */
+    width: 5%; /* Define el ancho del logo */
 }
 
-#logo{
-    line-height: 5%;
-    width: 5%;
-    margin-top: 5%;
+#icono-cambiar-colores {
+    line-height: 3%; /* Define la altura de línea del icono */
+    width: 3%; /* Define el ancho del icono */
 }
 
-#div_textarea{
-    width: 100%;
-    height: 65%;
+#div-margen-superior, #div-margen-inferior {
+    height: 1%; /* Define la altura de los márgenes superior e inferior */
+    width: 100%; /* Define el ancho de los márgenes */
 }
 
-#textarea_ingreso{
-    resize: none;
-    background-color: var(--color-azul-claro);
-    color: var(--color-azul-oscuro);
-    width: 100%;
-    height: 100%;   
-    border:none;
-    font-size: 130%;
+main {
+    height: 80%; /* Define la altura del contenido principal */
+    width: 100%; /* Define el ancho del contenido principal */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: row; /* Organiza los elementos en una fila */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
 }
 
-#textarea_ingreso::placeholder{
-    color:var(--color-azul-oscuro);
+#div-entrada {
+    width: 45%; /* Define el ancho del contenedor de entrada */
+    height: 100%; /* Define la altura del contenedor de entrada */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
-#div_advertencia{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: var(--color-gris);
+#div-entrada-logotextoadvertencia {
+    height: 90%; /* Define la altura del sub-contenedor de entrada */
+    width: 100%; /* Define el ancho del sub-contenedor de entrada */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: column; /* Organiza los elementos en una columna */
 }
 
-#parrafo_advertencia{
-    width: 100%;
-    line-height: 100%;
+#logo-alura {
+    line-height: 3%; /* Define la altura de línea del logo de Alura */
+    width: 3%; /* Define el ancho del logo de Alura */
 }
 
-#icono{
-    line-height: 3%;
-    width: 3%;
+#textarea-entrada {
+    width: 100%; /* Define el ancho del área de texto de entrada */
+    height: 80%; /* Define la altura del área de texto de entrada */
+    resize: none; /* Desactiva el redimensionamiento del área de texto */
+    background-color: var(--color-secundario); /* Aplica el color de fondo secundario */
+    color: var(--color-primario); /* Aplica el color de texto primario */
+    border: none; /* Elimina el borde */
+    font-size: 115%; /* Aumenta el tamaño de la fuente */
+    padding: 3%; /* Añade relleno interno */
 }
 
-#div_bontones_encriptacion, #div_boton_copiar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 10%;
+#textarea-entrada::placeholder {
+    color: var(--color-primario); /* Aplica el color de texto primario al texto de marcador de posición */
 }
 
-a{
-    text-decoration: none;
-    background-color:var(--color-azul-oscuro);
-    color:var(--color-blanco);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 10px 10px 10px 10px;
-    width: 35%;
-    height: 70%;
+#div-entrada-advertencia {
+    width: 100%; /* Define el ancho del contenedor de advertencia */
+    height: 10%; /* Define la altura del contenedor de advertencia */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: row; /* Organiza los elementos en una fila */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    color: var(--color-gris); /* Aplica el color de texto gris */
+    padding-left: 3%; /* Añade relleno a la izquierda */
 }
 
-a:active{
-    background-color:var(--color-azul-claro);
-    color: var(--color-azul-oscuro);
-    border: 1px solid #000000;
+#icono-exclamacion {
+    line-height: 3%; /* Define la altura de línea del icono de exclamación */
+    width: 3%; /* Define el ancho del icono de exclamación */
 }
 
-#div_secundario{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
+#parrafo-advertencia {
+    width: 100%; /* Define el ancho del párrafo de advertencia */
+    line-height: 100%; /* Define la altura de línea del párrafo */
+    font-size: 80%; /* Define el tamaño de la fuente del párrafo */
 }
 
-#div_mensaje{
-    width: 90%;
-    height: 90%;
-    background-color: var(--color-blanco);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-around;
-    margin: 5%;
-    margin-bottom: 1%;
-    padding: 5%;
+#div-entrada-botones {
+    height: 10%; /* Define la altura del contenedor de botones */
+    width: 100%; /* Define el ancho del contenedor de botones */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: row; /* Organiza los elementos en una fila */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
 }
 
-#textarea_salida{
-    width: 90%;
-    height: 90%;
-    background-color: var(--color-blanco);
-    border-radius: 25px;
-    margin: 5%;
-    margin-bottom: 1%;
-    resize: none;
-    border: none;
-    color:var(--color-gris);
-    padding: 5%;
-    font-size: 100%;
-    
-
+#boton-borrar, #boton-encriptar, #boton-desencriptar, #boton-copiar {
+    text-decoration: none; /* Elimina el subrayado del texto de los enlaces */
+    background-color: var(--color-primario); /* Aplica el color de fondo primario */
+    color: var(--color-blanco); /* Aplica el color de texto blanco */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    justify-content: center; /* Alinea los elementos en el centro horizontalmente */
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); /* Añade una sombra a los botones */
+    border-radius: 10px 10px 10px 10px; /* Redondea las esquinas de los botones */
+    width: 20%; /* Define el ancho de los botones */
+    height: 70%; /* Define la altura de los botones */
+    font-size: 80%; /* Define el tamaño de la fuente de los botones */
 }
 
-#muneco{
-    width: 50%;
-    line-height: 50%;
+#boton-borrar:active, #boton-encriptar:active, #boton-desencriptar:active {
+    background-color: var(--color-secundario); /* Cambia el color de fondo al secundario cuando están activos */
+    color: var(--color-primario); /* Cambia el color del texto al primario cuando están activos */
+    border: 1px solid #000000; /* Añade un borde negro cuando están activos */
 }
 
-#parrafo_ningun{
-    font-size: 130%;
-    font-weight: bold;
+#div-salida {
+    width: 45%; /* Define el ancho del contenedor de salida */
+    height: 100%; /* Define la altura del contenedor de salida */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+    align-items: center; /* Alinea los elementos en el centro horizontalmente */
 }
 
-#parrafo_ningun, #parrafo_ingresa{
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-fill-color: var(--color-gris);
-    text-shadow: 1px 3px 5px black;
-    text-align:center;
+#div-salida-mensaje {
+    width: 90%; /* Define el ancho del contenedor de mensaje */
+    height: 90%; /* Define la altura del contenedor de mensaje */
+    background-color: var(--color-blanco); /* Aplica el color de fondo blanco */
+    border-radius: 25px; /* Redondea las esquinas del contenedor */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Alinea los elementos en el centro horizontalmente */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
 }
 
-@media (max-width: 800px) {
-    body{
-        flex-direction: column;
-        align-items: center;
-        font-size: 3vw;
+#muneco {
+    width: 30%; /* Define el ancho de la imagen */
+    line-height: 30%; /* Define la altura de línea de la imagen */
+}
+
+#parrafo-ningun {
+    font-size: 100%; /* Define el tamaño de la fuente del párrafo */
+    font-weight: bold; /* Aplica negrita al párrafo */
+}
+
+#parrafo-ingresa {
+    font-size: 70%; /* Define el tamaño de la fuente del párrafo */
+    font-weight: bold; /* Aplica negrita al párrafo */
+}
+
+#parrafo-ningun, #parrafo-ingresa {
+    -webkit-text-stroke-width: 1px; /* Añade un contorno al texto */
+    -webkit-text-stroke-color: black; /* Define el color del contorno del texto */
+    -webkit-text-fill-color: var(--color-gris); /* Define el color de relleno del texto */
+    text-shadow: 1px 3px 5px black; /* Añade una sombra al texto */
+    text-align: center; /* Centra el texto */
+}
+
+#div-salida-textarea {
+    width: 90%; /* Define el ancho del contenedor de área de texto */
+    height: 90%; /* Define la altura del contenedor de área de texto */
+}
+
+#textarea-salida {
+    width: 100%; /* Define el ancho del área de texto de salida */
+    height: 100%; /* Define la altura del área de texto de salida */
+    background-color: var(--color-blanco); /* Aplica el color de fondo blanco */
+    border-radius: 25px; /* Redondea las esquinas del área de texto */
+    resize: none; /* Desactiva el redimensionamiento del área de texto */
+    border: none; /* Elimina el borde */
+    color: var(--color-gris); /* Aplica el color de texto gris */
+    padding: 3%; /* Añade relleno interno */
+    font-size: 100%; /* Define el tamaño de la fuente */
+}
+
+#div-salida-boton {
+    height: 10%; /* Define la altura del contenedor de botón */
+    width: 100%; /* Define el ancho del contenedor de botón */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    flex-direction: row; /* Organiza los elementos en una fila */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+}
+
+#boton-copiar {
+    background-color: var(--color-secundario); /* Aplica el color de fondo secundario */
+    color: var(--color-negro); /* Aplica el color de texto negro */
+}
+
+#boton-copiar:active {
+    background-color: var(--color-primario); /* Cambia el color de fondo al primario cuando está activo */
+    color: var(--color-blanco); /* Cambia el color del texto al blanco cuando está activo */
+    border: 1px solid #000000; /* Añade un borde negro cuando está activo */
+}
+
+footer {
+    height: 5%; /* Define la altura del pie de página */
+    width: 100%; /* Define el ancho del pie de página */
+    background-color: var(--color-primario); /* Aplica el color de fondo primario */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    justify-content: center; /* Alinea los elementos en el centro horizontalmente */
+    font-size: 80%; /* Define el tamaño de la fuente */
+    color: var(--color-blanco); /* Aplica el color de texto blanco */
+}
+
+@media (max-width: 800px) { /*Define las condiciones cuando elarea de visualizacion tiene un ancho menor a 800px*/
+    main {
+        flex-direction: column; /* Organiza los elementos en una columna */
+        align-items: center; /* Alinea los elementos en el centro horizontalmente */
+        font-size: 3vw; /* Define el tamaño de la fuente en función del ancho de la ventana */
     }
     
-    #div_principal, #div_secundario{
-        width: 100%;
+    header {
+        justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
     }
 
-    #logo{
-        line-height: 2%;
-        width: 2%;
-        margin-top: 1%;
-        margin-left: 2%;
-    }
-   
-    #div_mensaje{
-        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    #div-entrada, #div-salida {
+        width: 95%; /* Define el ancho del contenedor de entrada y salida */
     }
 
-    #muneco{
-        display: none;
-    }  
-       
-    #parrafo_ningun, #parrafo_ingresa{
-        -webkit-text-stroke-width: 0px;
-        -webkit-text-stroke-color: black;
-        -webkit-text-fill-color: var(--color-gris);
-        text-shadow: 0px 0px 0px black;
+    #logo-alura {
+        display: none; /* Oculta el logo de Alura */
+    }
+
+    #div-mensaje {
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75); /* Añade una sombra al contenedor */
+    }
+    
+    #parrafo-ningun, #parrafo-ingresa {
+        -webkit-text-stroke-width: 0px; /* Elimina el contorno del texto */
+        -webkit-text-stroke-color: black; /* Define el color del contorno del texto */
+        -webkit-text-fill-color: var(--color-gris); /* Define el color de relleno del texto */
+        text-shadow: 0px 0px 0px black; /* Elimina la sombra del texto */
+    }
+}
+
+@media (max-height: 400px) { /*Define las condiciones cuando elarea de visualizacion tiene un alto menor a 800px*/
+    #muneco {
+        display: none; /* Oculta la imagen */
     }
 }
