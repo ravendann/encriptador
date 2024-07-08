@@ -19,6 +19,12 @@ Este es un ejemplo donde se muestra el proceso descrito y se alternan, aunque no
 <img src= "views/interface-colores.png" alt="Interfaz en un tablet"/>
 <br><br>
 
-<strong>Tecnologías utilizadas:</strong> html, css, js.<br>
+Video que muestra el uso de la página.
+<br>
+<video width="640" height="360" controls>  <source src="videos/video.mp4" type="video/mp4">}
+<br><br>
+
+<strong>Tecnologías utilizadas:</strong> html, css, js.
+<br>
 
 <strong>Personas Desarrolladoras del Proyecto:</strong> Daniel Pérez López
