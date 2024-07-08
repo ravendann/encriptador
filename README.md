@@ -1,10 +1,15 @@
 <h1>Encriptador de Texto</h1>
 
 - Estado del proyecto: En Construcción
+<img src= "viewss/interfaz-escritorio.png" alt="Interfaz de escritorio y portada del proyecto"/>
 
-<img src= "assets/interfaz.png" alt="Interfaz y portada del proyecto"/>
+- Descripción del Proyecto: Página en la que un usuario introduce un texto encriptado, en letras minúsculas y sin acentos, y es desencriptado. 
+<img src= "viewss/interfaz-celular.png" alt="Interfaz en un celular"/>
 
-- Descripción del Proyecto: Página en la que un usuario introduce un texto encriptado, en letras minúsculas y sin acentos, y es desencriptado. También puede introducir un texto encriptado anteriormente y desencriptarlo.
+También puede introducir un texto encriptado anteriormente y desencriptarlo.
+<img src= "viewss/interfaz-tablet.png" alt="Interfaz en un tablet"/>
+
+Este es un ejemplo donde se muestra el proceso descrito y se alternan, aunque no hay necesidad de esto, los colores principales de la página.
 
 - Tecnologías utilizadas: html, css, js.
 

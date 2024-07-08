@@ -104,11 +104,3 @@ function copiar() {
     let texto = document.getElementById("textarea-salida").value.trim(); // Obtiene y recorta el texto de salida.
     navigator.clipboard.writeText(texto); // Copia el texto al portapapeles.
 }
-
-
-/*
-README
-leer trello y etc
-
-
-*/

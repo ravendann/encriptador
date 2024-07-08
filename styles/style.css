@@ -13,7 +13,7 @@
     padding: 0%; /* Elimina el relleno predeterminado de todos los elementos */
     box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
     font-family: "Inter", sans-serif; /* Aplica la fuente "Inter" a todos los elementos */
-    /*outline: 1px dotted rgb(13, 66, 66); /*Activar este borde para revisar los límites de las secciones*/
+    /*outline: 1px dotted rgb(13, 66, 66); /*Descomentar este borde para revisar los límites de las secciones*/
 }
 
 body {
@@ -85,6 +85,7 @@ main {
     border: none; /* Elimina el borde */
     font-size: 115%; /* Aumenta el tamaño de la fuente */
     padding: 3%; /* Añade relleno interno */
+    margin-top: 1%;
 }
 
 #textarea-entrada::placeholder {
