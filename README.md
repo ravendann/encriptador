@@ -13,4 +13,4 @@ Este es un ejemplo donde se muestra el proceso descrito y se alternan, aunque no
 
 - Tecnologías utilizadas: html, css, js.
 
-- Personas Desarrolladoras del Proyecto: Daniel Plop
+- Personas Desarrolladoras del Proyecto: Daniel Pérez López
