@@ -21,7 +21,9 @@ Este es un ejemplo donde se muestra el proceso descrito y se alternan, aunque no
 
 Video que muestra el uso de la página.
 <br>
-<video width="640" height="360" controls>  <source src="videos/video.mp4" type="video/mp4">}
+<video width="640" height="360" controls>  <source src="videos/video.mp4" type="video/mp4">
+<br>
+<a href="https://youtu.be/Llr5xifxQoQ">Link a video en Youtube</a>
 <br><br>
 
 <strong>Tecnologías utilizadas:</strong> html, css, js.
