@@ -10,6 +10,7 @@ También puede introducir un texto encriptado anteriormente y desencriptarlo.
 <img src= "views/interfaz-tablet.png" alt="Interfaz en un tablet"/>
 
 Este es un ejemplo donde se muestra el proceso descrito y se alternan, aunque no hay necesidad de esto, los colores principales de la página.
+<img src= "views/cambiar-colores.png" alt="Interfaz en un tablet"/>
 
 - Tecnologías utilizadas: html, css, js.
 
