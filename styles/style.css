@@ -41,6 +41,7 @@ header {
 #icono-cambiar-colores {
     line-height: 3%; /* Define la altura de línea del icono */
     width: 3%; /* Define el ancho del icono */
+    cursor: pointer; /*Establece un cursor diferente para el icono*/
 }
 
 #div-margen-superior, #div-margen-inferior {
