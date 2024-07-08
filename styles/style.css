@@ -20,7 +20,7 @@ body {
     height: 100vh; /* Define la altura del cuerpo del documento al 100% del alto de la ventana */
     width: 100vw; /* Define el ancho del cuerpo del documento al 100% del ancho de la ventana */
     background-color: var(--color-secundario); /* Aplica el color de fondo secundario */
-    cursor: url("./assets/cursor-general.png") 0 0, auto; /* Cambia el cursor a una imagen personalizada */
+    cursor: url("../assets/cursor-general.png") 0 0, auto; /* Cambia el cursor a una imagen personalizada */
 }
 
 header {
