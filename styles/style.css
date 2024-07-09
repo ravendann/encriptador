@@ -86,7 +86,7 @@ main {
     border: none; /* Elimina el borde */
     font-size: 115%; /* Aumenta el tamaño de la fuente */
     padding: 3%; /* Añade relleno interno */
-    margin-top: 1%;
+    margin-top: 1%; /*Añade espacio de separacion con el elemento superior*/
 }
 
 #textarea-entrada::placeholder {
@@ -143,6 +143,18 @@ main {
     border: 1px solid #000000; /* Añade un borde negro cuando están activos */
 }
 
+#div-alerta {
+    width: auto; /* La anchura se ajusta automáticamente al contenido */
+    height: auto; /* La altura se ajusta automáticamente al contenido */
+    background-color: var(--color-negro); /* El fondo se establece con una variable CSS que representa el color negro */
+    color: var(--color-blanco); /* El texto se muestra en un color blanco definido por una variable CSS */
+    position: fixed; /* El elemento se posiciona de manera fija en la pantalla */
+    top: 50%; /* El elemento se posiciona a la mitad de la altura de la ventana */
+    left: 50%; /* El elemento se posiciona a la mitad de la anchura de la ventana */
+    transform: translate(-50%, -50%); /* Ajusta la posición del elemento para centrarlo en la pantalla */
+    text-align: center; /* El texto dentro del elemento se centra horizontalmente */
+}
+
 #div-salida {
     width: 45%; /* Define el ancho del contenedor de salida */
     height: 100%; /* Define la altura del contenedor de salida */
@@ -154,13 +166,14 @@ main {
 
 #div-salida-mensaje {
     width: 90%; /* Define el ancho del contenedor de mensaje */
-    height: 90%; /* Define la altura del contenedor de mensaje */
+    height: 85%; /* Define la altura del contenedor de mensaje */
     background-color: var(--color-blanco); /* Aplica el color de fondo blanco */
     border-radius: 25px; /* Redondea las esquinas del contenedor */
     display: flex; /* Utiliza el modelo de caja flexible */
     flex-direction: column; /* Organiza los elementos en una columna */
     align-items: center; /* Alinea los elementos en el centro horizontalmente */
     justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+    margin-top: 5%; /*Añade espacio de separacion con el elemento superior*/
 }
 
 #muneco {
@@ -188,7 +201,8 @@ main {
 
 #div-salida-textarea {
     width: 90%; /* Define el ancho del contenedor de área de texto */
-    height: 90%; /* Define la altura del contenedor de área de texto */
+    height: 85%; /* Define la altura del contenedor de área de texto */
+    margin-top: 5%; /*Añade espacio de separacion con el elemento superior*/
 }
 
 #textarea-salida {

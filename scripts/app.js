@@ -4,6 +4,7 @@ var selectorColor = 0; // Variable global para rastrear el estado actual de los 
 function inicializar() {
     // Inicializa los elementos de la interfaz de usuario al estado predeterminado.
     document.getElementById("div-salida-textarea").style.display = "none"; // Oculta el área de texto de salida.
+    document.getElementById("div-alerta").hidden = true; // Oculta el div de mensajes de alerta
     document.getElementById("textarea-salida").setAttribute("readonly", "true"); // Establece el área de texto de salida como solo lectura.
     document.getElementById("textarea-salida").value = ""; // Limpia el contenido del área de texto de salida.
     document.getElementById("textarea-entrada").setAttribute("placeholder", "Ingrese el texto aquí..."); // Establece el marcador de posición para el área de texto de entrada.
@@ -87,7 +88,7 @@ function evaluarTexto() {
             let valorCaracter = texto.charCodeAt(i); // Obtiene el código ASCII del carácter actual.
             if (!((valorCaracter > 96 && valorCaracter < 126) || (valorCaracter == 129) || (valorCaracter == 164) || (valorCaracter == 32) || (valorCaracter == 10))) {
                 // Verifica si el carácter es una letra minúscula sin acentos, una enie, un espacio o una nueva línea, de acuerdo a su valor en ascci
-                alert("El texto ingresado tiene el caracter inválido \"" + texto[i] + "\". Por favor ingrese solo letras minúsculas y sin acentos.");
+                mostrarAlerta("El texto ingresado tiene el caracter inválido \"" + texto[i] + "\". Por favor ingrese solo letras minúsculas y sin acentos.", 3000);
                 // Muestra una alerta si se encuentra un carácter inválido.
                 evaluacion = false; // Establece la evaluación como falsa.
                 break; // Sale del bucle si se encuentra un carácter inválido.
@@ -101,6 +102,23 @@ function evaluarTexto() {
 
 function copiar() {
     // Copia el texto de salida al portapapeles.
-    let texto = document.getElementById("textarea-salida").value.trim(); // Obtiene y recorta el texto de salida.
-    navigator.clipboard.writeText(texto); // Copia el texto al portapapeles.
+    let texto = document.getElementById("textarea-salida").value.trim(); // Obtiene el valor y elimina espacios en blanco al inicio y final.
+    if(texto.length != 0){ // Verifica que el texto no esté vacío.
+        navigator.clipboard.writeText(texto); // Copia el texto al portapapeles.
+        mostrarAlerta("Texto copiado", 1000); // Muestra una alerta que indica que el texto ha sido copiado.
+    }
 }
+
+function mostrarAlerta(texto, duracion) {
+    document.getElementById("div-alerta").hidden = false; // Muestra el div con id "div-alerta".
+    document.getElementById("div-alerta").innerText = texto; // Establece el texto de la alerta.
+    setTimeout(ocultarAlerta, duracion); // Llama a la función ocultarAlerta después de un tiempo especificado en milisegundos.
+}
+
+function ocultarAlerta() {
+    document.getElementById("div-alerta").hidden = true; // Oculta el div con id "div-alerta".
+}
+
+
+
+
