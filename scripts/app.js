@@ -13,6 +13,8 @@ function inicializar() {
 
 function cambiarColores() {
     // Cambia los colores primario y secundario del tema en base al valor de selectorColor.
+    let audio = document.getElementById("audio-colores"); // Establece el audio que sonara al dar clic al boton
+    audio.play(); // Reproduce el audio
     switch (selectorColor) {
         case 0:
             document.documentElement.style.setProperty('--color-primario', '#AC0000');
@@ -34,6 +36,8 @@ function cambiarColores() {
 
 function borrar() {
     // Borra el contenido del área de texto de entrada y reinicia el estado inicial de la interfaz.
+    let audio = document.getElementById("audio-borrar"); // Establece el audio que sonara al dar clic al boton
+    audio.play(); // Reproduce el audio
     document.getElementById("textarea-entrada").value = ""; // Limpia el contenido del área de texto de entrada.
     inicializar(); // Llama a la función inicializar para reiniciar el estado inicial de la interfaz.
 }
@@ -65,11 +69,10 @@ function desencriptar() {
     if (evaluarTexto()) { // Verifica si el texto de entrada es válido.
         let texto = document.getElementById("textarea-entrada").value; // Obtiene el texto de entrada.
         let textoDesencriptado = texto.replaceAll("ai", "a") // Desencripta "ai" a "a".
-            .replaceAll("enter", "e") // Desencripta "enter" a "e".
-            .replaceAll("imes", "i") // Desencripta "imes" a "i".
-            .replaceAll("ober", "o") // Desencripta "ober" a "o".
-            .replaceAll("ufat", "u"); // Desencripta "ufat" a "u".
-
+        .replaceAll("enter", "e") // Desencripta "enter" a "e".
+        .replaceAll("imes", "i") // Desencripta "imes" a "i".
+        .replaceAll("ober", "o") // Desencripta "ober" a "o".
+        .replaceAll("ufat", "u"); // Desencripta "ufat" a "u".
         document.getElementById("div-salida-mensaje").style.display = "none"; // Oculta el mensaje de salida predeterminado.
         document.getElementById("div-salida-textarea").style.display = "block"; // Muestra el área de texto de salida.
         document.getElementById("textarea-salida").value = textoDesencriptado; // Establece el texto desencriptado en el área de texto de salida.
@@ -81,7 +84,7 @@ function evaluarTexto() {
     let evaluacion = false; // Variable para almacenar el resultado de la evaluación.
     let texto = document.getElementById("textarea-entrada").value; // Obtiene el texto de entrada.
     if (texto.length == 0) {
-        inicializar(); // Reinicia el estado inicial si el texto de entrada está vacío.
+        mostrarAlerta("No hay texto que transformar", 1000); // Muestra una alerta que indica que el texto ha sido copiado.
         evaluacion = false; // Establece la evaluación como falsa.
     } else {
         for (let i = 0; i < texto.length; i++) {
@@ -97,15 +100,26 @@ function evaluarTexto() {
             }
         }
     }
+
+    if(evaluacion == true){
+        let audio = document.getElementById("audio-criptar"); // Establece el audio que sonara al dar clic al boton
+        audio.play(); // Reproduce el audio
+    }
+
     return evaluacion; // Devuelve el resultado de la evaluación.
 }
 
 function copiar() {
     // Copia el texto de salida al portapapeles.
+    
     let texto = document.getElementById("textarea-salida").value.trim(); // Obtiene el valor y elimina espacios en blanco al inicio y final.
     if(texto.length != 0){ // Verifica que el texto no esté vacío.
         navigator.clipboard.writeText(texto); // Copia el texto al portapapeles.
         mostrarAlerta("Texto copiado", 1000); // Muestra una alerta que indica que el texto ha sido copiado.
+        let audio = document.getElementById("audio-copiar"); // Establece el audio que sonara al dar clic al boton
+        audio.play(); // Reproduce el audio
+    } else{
+        mostrarAlerta("No hay texto que copiar", 1000); // Muestra una alerta que indica que no hay texto que copiar.
     }
 }
 
@@ -123,6 +137,7 @@ function guardar() {
     let textoCompleto = ""; // Inicializa la variable textoCompleto como una cadena vacía
     let textAreaEntrada = document.getElementById('textarea-entrada').value; // Obtiene el valor del textarea de entrada
     let textAreaSalida = document.getElementById('textarea-salida').value; // Obtiene el valor del textarea de salida
+
     if (textAreaEntrada.length != 0) { // Verifica si el textarea de entrada no está vacío
         textoCompleto = "Texto Ingresado:\n" + textAreaEntrada + "\n\n"; // Si no está vacío, añade su contenido a textoCompleto
     }
@@ -137,6 +152,8 @@ function guardar() {
         enlace.href = URL.createObjectURL(blob); // Establece el href del enlace con una URL que apunta al Blob
         enlace.download = 'EncripcionDesencripcion.txt'; // Establece el atributo download del enlace con el nombre del archivo
         enlace.click(); // Simula un clic en el enlace para iniciar la descarga
+        let audio = document.getElementById("audio-guardar"); // Establece el audio que sonara al dar clic al boton
+        audio.play(); // Reproduce el audio
     } else {
         mostrarAlerta("No hay textos que guardar", 1300); // Muestra una alerta si no hay textos que guardar
     }
