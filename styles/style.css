@@ -123,7 +123,7 @@ main {
     justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
 }
 
-#boton-borrar, #boton-encriptar, #boton-desencriptar, #boton-copiar {
+#boton-borrar, #boton-encriptar, #boton-desencriptar, #boton-copiar, #boton-guardar {
     text-decoration: none; /* Elimina el subrayado del texto de los enlaces */
     background-color: var(--color-primario); /* Aplica el color de fondo primario */
     color: var(--color-blanco); /* Aplica el color de texto blanco */
@@ -153,6 +153,8 @@ main {
     left: 50%; /* El elemento se posiciona a la mitad de la anchura de la ventana */
     transform: translate(-50%, -50%); /* Ajusta la posición del elemento para centrarlo en la pantalla */
     text-align: center; /* El texto dentro del elemento se centra horizontalmente */
+    opacity: 70%;
+    border-radius: 3px;
 }
 
 #div-salida {
@@ -226,7 +228,7 @@ main {
     justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
 }
 
-#boton-copiar {
+#boton-copiar, #boton-guardar {
     background-color: var(--color-secundario); /* Aplica el color de fondo secundario */
     color: var(--color-negro); /* Aplica el color de texto negro */
 }

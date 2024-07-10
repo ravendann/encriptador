@@ -119,6 +119,28 @@ function ocultarAlerta() {
     document.getElementById("div-alerta").hidden = true; // Oculta el div con id "div-alerta".
 }
 
+function guardar() { 
+    let textoCompleto = ""; // Inicializa la variable textoCompleto como una cadena vacía
+    let textAreaEntrada = document.getElementById('textarea-entrada').value; // Obtiene el valor del textarea de entrada
+    let textAreaSalida = document.getElementById('textarea-salida').value; // Obtiene el valor del textarea de salida
+    if (textAreaEntrada.length != 0) { // Verifica si el textarea de entrada no está vacío
+        textoCompleto = "Texto Ingresado:\n" + textAreaEntrada + "\n\n"; // Si no está vacío, añade su contenido a textoCompleto
+    }
+
+    if (textAreaSalida.length != 0) { // Verifica si el textarea de salida no está vacío
+        textoCompleto = textoCompleto + "Texto salida:\n" + textAreaSalida; // Si no está vacío, añade su contenido a textoCompleto
+    }
+
+    if (textoCompleto.length != 0) { // Verifica si textoCompleto no está vacío
+        let blob = new Blob([textoCompleto], { type: 'text/plain' }); // Crea un Blob con el contenido de textoCompleto y tipo de texto plano
+        let enlace = document.createElement('a'); // Crea un elemento de enlace (a)
+        enlace.href = URL.createObjectURL(blob); // Establece el href del enlace con una URL que apunta al Blob
+        enlace.download = 'EncripcionDesencripcion.txt'; // Establece el atributo download del enlace con el nombre del archivo
+        enlace.click(); // Simula un clic en el enlace para iniciar la descarga
+    } else {
+        mostrarAlerta("No hay textos que guardar", 1300); // Muestra una alerta si no hay textos que guardar
+    }
+}
 
 
 
