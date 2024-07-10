@@ -143,7 +143,7 @@ function guardar() {
     }
 
     if (textAreaSalida.length != 0) { // Verifica si el textarea de salida no está vacío
-        textoCompleto = textoCompleto + "Texto salida:\n" + textAreaSalida; // Si no está vacío, añade su contenido a textoCompleto
+        textoCompleto = textoCompleto + "Texto Salida:\n" + textAreaSalida; // Si no está vacío, añade su contenido a textoCompleto
     }
 
     if (textoCompleto.length != 0) { // Verifica si textoCompleto no está vacío
