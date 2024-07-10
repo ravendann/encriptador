@@ -233,7 +233,7 @@ main {
     color: var(--color-negro); /* Aplica el color de texto negro */
 }
 
-#boton-copiar:active {
+#boton-copiar:active, #boton-guardar{
     background-color: var(--color-primario); /* Cambia el color de fondo al primario cuando está activo */
     color: var(--color-blanco); /* Cambia el color del texto al blanco cuando está activo */
     border: 1px solid #000000; /* Añade un borde negro cuando está activo */

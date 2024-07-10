@@ -87,7 +87,7 @@ function evaluarTexto() {
         for (let i = 0; i < texto.length; i++) {
             let valorCaracter = texto.charCodeAt(i); // Obtiene el código ASCII del carácter actual.
             if (!((valorCaracter > 96 && valorCaracter < 126) || (valorCaracter == 129) || (valorCaracter == 164) || (valorCaracter == 32) || (valorCaracter == 10))) {
-                // Verifica si el carácter es una letra minúscula sin acentos, una enie, un espacio o una nueva línea, de acuerdo a su valor en ascci
+                // Verifica si el carácter es una letra minúscula sin acentos, una enie, una u con dieresis, un espacio o una nueva línea, de acuerdo a su valor en ascci
                 mostrarAlerta("El texto ingresado tiene el caracter inválido \"" + texto[i] + "\". Por favor ingrese solo letras minúsculas y sin acentos.", 3000);
                 // Muestra una alerta si se encuentra un carácter inválido.
                 evaluacion = false; // Establece la evaluación como falsa.
