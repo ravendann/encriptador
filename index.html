@@ -2,23 +2,18 @@
 <html lang="es-co"> <!-- Indica el idioma principal del documento como español de Colombia -->
 
 <head>
-    <meta charset="UTF-8">
-    <!-- Especifica la codificación de caracteres como UTF-8 que es un formato de codificación de caracteres Unicode responsable de que el navegador muestre el contenido del texto correctamente decodificado -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Asegura que el documento sea compatible con las versiones más recientes de IE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura la ventana gráfica para asegurar que el diseño se vea bien en dispositivos móviles -->
+    <meta charset="UTF-8"><!-- Especifica la codificación de caracteres como UTF-8 que es un formato de codificación de caracteres Unicode responsable de que el navegador muestre el contenido del texto correctamente decodificado -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Asegura que el documento sea compatible con las versiones más recientes de IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Configura la ventana gráfica para asegurar que el diseño se vea bien en dispositivos móviles -->
     <link rel="stylesheet" href="styles/style.css"> <!-- Vincula el archivo CSS externo para los estilos -->
     <link rel="icon" href="assets/logo-planilla.png" type="image/x-icon"> <!-- Agrega el icono de la pagina en la pestaña -->
-    <title>Encriptador de Texto</title>
-    <!-- Define el título de la página que se muestra en la pestaña del navegador -->
+    <title>Encriptador de Texto</title><!-- Define el título de la página que se muestra en la pestaña del navegador -->
 </head>
 
-<body> <!-- Indica la parte del cuerpo del contenido del documento -->
+<body> <!-- Cuerpo del documento -->
     <header> <!-- Define la cabecera de la página -->
         <img id="logo-planilla" src="assets/logo-planilla.png" alt="Logo de la pagina en forma de planilla" />
-        <!-- Imagen del logo principal con descripción alternativa -->
-        <h1>Encriptador de Texto</h1> <!-- Título principal de la página -->
+        <h1>Encriptador de Texto</h1>
         <img id="icono-cambiar-colores" onclick="cambiarColores()" src="assets/cambiar-colores.png"
             alt="Icono de cambio de color" /> <!-- Icono con evento onclick para cambiar colores -->
     </header>
@@ -33,25 +28,18 @@
     <div id="div-margen-superior"></div> <!-- Div para añadir un margen superior -->
     <main> <!-- Contenido principal de la página -->
         <div id="div-entrada"> <!-- Div contenedor para la entrada de texto -->
-            <div id="div-entrada-logotextoadvertencia">
-                <!-- Div que agrupa el logo, el área de texto y la advertencia -->
+            <div id="div-entrada-logotextoadvertencia"><!-- Div que agrupa el logo, el área de texto y la advertencia -->
                 <img id="logo-alura" src="assets/logo-alura.png" alt="Logo de Alura" />
-                <!-- Imagen del logo de Alura con descripción alternativa -->
                 <textarea id="textarea-entrada"></textarea> <!-- Área de texto para la entrada del usuario -->
                 <div id="div-entrada-advertencia"> <!-- Div para mostrar la advertencia -->
                     <img id="icono-exclamacion" src="assets/icono-exclamacion.png" alt="Icono de exclamacion" />
-                    <!-- Icono de exclamación con descripción alternativa -->
                     <p id="parrafo-advertencia">Solo letras minúsculas y sin acentos.</p>
-                    <!-- Párrafo de advertencia sobre el formato del texto -->
                 </div>
             </div>
             <div id="div-entrada-botones"> <!-- Div que contiene los botones de acción -->
-                <a href="#" id="boton-borrar" onclick="borrar()">Borrar</a>
-                <!-- Enlace que actúa como botón para borrar el texto, con evento onclick -->
-                <a href="#" id="boton-encriptar" onclick="encriptar()">Encriptar</a>
-                <!-- Enlace que actúa como botón para encriptar el texto, con evento onclick -->
-                <a href="#" id="boton-desencriptar" onclick="desencriptar()">Desencriptar</a>
-                <!-- Enlace que actúa como botón para desencriptar el texto, con evento onclick -->
+                <a href="#" id="boton-borrar" onclick="borrar()">Borrar</a><!-- Enlace que actúa como botón para borrar el texto, con evento onclick -->
+                <a href="#" id="boton-encriptar" onclick="encriptar()">Encriptar</a><!-- Enlace que actúa como botón para encriptar el texto, con evento onclick -->
+                <a href="#" id="boton-desencriptar" onclick="desencriptar()">Desencriptar</a><!-- Enlace que actúa como botón para desencriptar el texto, con evento onclick -->
             </div>
         </div>
 
@@ -60,28 +48,22 @@
         <div id="div-salida"> <!-- Div contenedor para la salida de texto -->
             <div id="div-salida-mensaje"> <!-- Div que contiene el mensaje por defecto y la animación -->
                 <img id="muneco" src="assets/finn.gif" alt="Animacion de un niño meneandose jocosamente" />
-                <!-- Animación con descripción alternativa -->
-                <p id="parrafo-ningun">Ningún mensaje fue encontrado</p>
-                <!-- Párrafo que muestra un mensaje si no se encuentra ningún texto -->
+                <p id="parrafo-ningun">Ningún mensaje fue encontrado</p><!-- Párrafo que muestra un mensaje si no se encuentra ningún texto -->
                 <p id="parrafo-ingresa">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <!-- Párrafo que indica al usuario que debe ingresar texto -->
             </div>
             <div id="div-salida-textarea"> <!-- Div que contiene el área de texto para la salida -->
                 <textarea id="textarea-salida"></textarea> <!-- Área de texto para mostrar el resultado -->
             </div>
             <div id="div-salida-boton"> <!-- Div que contiene el botón de copiar -->
-                <a href="#" id="boton-copiar" onclick="copiar()">Copiar</a>
-                <!-- Enlace que actúa como botón para copiar el texto, con evento onclick -->
-                <a href="#" id="boton-guardar" onclick="guardar()">Guardar</a>
-                <!-- Enlace que actúa como botón para guardar el texto, con evento onclick -->
+                <a href="#" id="boton-copiar" onclick="copiar()">Copiar</a><!-- Enlace que actúa como botón para copiar el texto, con evento onclick -->
+                <a href="#" id="boton-guardar" onclick="guardar()">Guardar</a><!-- Enlace que actúa como botón para guardar el texto, con evento onclick -->
             </div>
         </div>
     </main>
     <div id="div-margen-inferior"></div> <!-- Div para añadir un margen inferior -->
     <footer>
-        Desarrollado por Daniel Plop - Oracle - Alura Latam / 2024 <!-- Pie de página con información del desarrollador y el año -->
+        Desarrollado por Daniel Plop - Oracle - Alura Latam / 2024 
     </footer>
-    <script src="scripts/app.js"></script> <!-- Vincula el archivo JavaScript externo -->
+    <script src="scripts/app.js"></script> <!-- Vinnnncula el archivo JavaScript externo -->
 </body>
-
 </html>

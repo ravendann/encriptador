@@ -84,13 +84,13 @@ function evaluarTexto() {
     let evaluacion = false; // Variable para almacenar el resultado de la evaluación.
     let texto = document.getElementById("textarea-entrada").value; // Obtiene el texto de entrada.
     if (texto.length == 0) {
-        mostrarAlerta("No hay texto que transformar", 1000); // Muestra una alerta que indica que el texto ha sido copiado.
-        evaluacion = false; // Establece la evaluación como falsa.
+        mostrarAlerta("No hay texto que transformar", 1000); // Muestra una alerta que indica que no hay texto qeu copiar con duracion de 1000 ms.
+        evaluacion = false; 
     } else {
         for (let i = 0; i < texto.length; i++) {
             let valorCaracter = texto.charCodeAt(i); // Obtiene el código ASCII del carácter actual.
             if (!((valorCaracter > 96 && valorCaracter < 126) || (valorCaracter == 129) || (valorCaracter == 164) || (valorCaracter == 32) || (valorCaracter == 10))) {
-                // Verifica si el carácter es una letra minúscula sin acentos, una enie, una u con dieresis, un espacio o una nueva línea, de acuerdo a su valor en ascci
+                // Verifica si el carácter no es una letra minúscula sin acentos, una enie, una u con dieresis, un espacio o una nueva línea, de acuerdo a su valor en ascci
                 mostrarAlerta("El texto ingresado tiene el caracter inválido \"" + texto[i] + "\". Por favor ingrese solo letras minúsculas y sin acentos.", 3000);
                 // Muestra una alerta si se encuentra un carácter inválido.
                 evaluacion = false; // Establece la evaluación como falsa.
